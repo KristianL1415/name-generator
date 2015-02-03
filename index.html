@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Name Generator</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="posthandler.js"></script>
+</head>
+    <body>
+        <form id="generatorForm" action="generator.php" method="post">
+            <p>Your name: <input type="text" name="name" /></p>
+            <p>Your age: <input type="text" name="age" /></p>
+            <p><input type="submit" value="Generate Name"/></p>
+        </form>
+
+        <div id="nameResponse"></div>
+    </body>
+</html>
