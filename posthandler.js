@@ -7,26 +7,20 @@ $(document).ready(function() {
              /* get some values from elements on the page: */
              var $form = $( this ),
                  $submit = $form.find( 'button[type="submit"]' ),
+                 location_value = $form.find( 'input[name="location"]' ).val(),
                  name_value = $form.find( 'input[name="name"]' ).val(),
-                 age_value = $form.find( 'input[name="age"]' ).val(),
                  url = $form.attr('action');
 
              /* Send the data using post */
              var posting = $.post( url, {
-                               name: name_value,
-                               age: age_value
+                               location: location_value,
+                               name: name_value
                            });
 
              posting.done(function( data )
              {
                  /* Put the results in a div */
                  $( "#nameResponse" ).html(data);
-
-                 /* Change the button text.
-                 $submit.text('Sent, Thank you'); */
-
-                 /* Disable the button.
-                 $submit.attr("disabled", true); */
              });
         });
     });
